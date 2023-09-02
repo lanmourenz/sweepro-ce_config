@@ -37,7 +37,7 @@
 
       ZMK_MACRO(
 
-        encoder, = // for encoder switch press;;;
+        encoder, = // for encoder switch press;;;;
         wait-ms = <0>;
         tap-ms = <10>;
         bindings =
@@ -48,7 +48,7 @@
 
       ZMK_MACRO(
 
-        spc1, = // for spacemacs window nav, Alt+M+1;;;
+        spc1, = // for spacemacs window nav, Alt+M+1;;;;
         wait-ms = <0>;
         tap-ms = <10>;
         bindings = <&kp LA(M) &kp N1>;
@@ -163,8 +163,6 @@
       &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
   &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
             >;
-
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
         };
     };
 };
