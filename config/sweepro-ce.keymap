@@ -5,10 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/ext_power.h>
 
 /*
  * Copyright (c) 2020 The ZMK Contributors
@@ -17,8 +13,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
@@ -29,162 +25,197 @@
 
 / {
     // macros
+
     macros {
-      ZMK_MACRO(hello, // hello world
+        ZMK_MACRO(hello,// hello world
         wait-ms = <0>;
-        tap-ms  = <10>;
-        bindings = <&kp LS(H) &kp E &kp L &kp L &kp O>
-        , <&kp COMMA>
-        , <&kp W &kp O &kp R &kp L &kp D &kp EXCL>;
-      )
+        tap-ms = <10>;
+        bindings =
+            <&kp LS(H) &kp E &kp L &kp L &kp O>,
+            <&kp COMMA>,
+            <&kp W &kp O &kp R &kp L &kp D &kp EXCL>;
 
-      ZMK_MACRO(encoder, // for encoder switch press
-        wait-ms = <0>;
-        tap-ms  = <10>;
-        bindings = <&kp LS(I) &kp SPACE &kp A &kp M &kp SPACE &kp A &kp SPACE>
-        , <&kp E &kp N &kp C &kp O &kp D &kp E &kp R>;
-      )
+        )
 
-      ZMK_MACRO(spc1, // for spacemacs window nav, Alt+M+1
+      ZMK_MACRO(
+
+        encoder, = // for encoder switch press;
         wait-ms = <0>;
-        tap-ms  = <10>;
+        tap-ms = <10>;
+        bindings =
+            <&kp LS(I) &kp SPACE &kp A &kp M &kp SPACE &kp A &kp SPACE>,
+            <&kp E &kp N &kp C &kp O &kp D &kp E &kp R>;
+
+        )
+
+      ZMK_MACRO(
+
+        spc1, = // for spacemacs window nav, Alt+M+1;
+        wait-ms = <0>;
+        tap-ms = <10>;
         bindings = <&kp LA(M) &kp N1>;
-      )
+
+        )
     
-      ZMK_MACRO(spc2,
+      ZMK_MACRO(
+
+        spc2,
         wait-ms = <0>;
-        tap-ms  = <10>;
+        tap-ms = <10>;
         bindings = <&kp LA(M) &kp N2>;
-      )
+
+        )
     
-      ZMK_MACRO(spc3,
+      ZMK_MACRO(
+
+        spc3,
         wait-ms = <0>;
-        tap-ms  = <10>;
+        tap-ms = <10>;
         bindings = <&kp LA(M) &kp N3>;
-      )
 
-      ZMK_MACRO(spc4,
+        )
+
+      ZMK_MACRO(
+
+        spc4,
         wait-ms = <0>;
-        tap-ms  = <10>;
+        tap-ms = <10>;
         bindings = <&kp LA(M) &kp N4>;
-      )
 
-      ZMK_MACRO(nxt_tab,
+        )
+
+      ZMK_MACRO(
+
+        nxt_tab,
         wait-ms = <0>;
-        tap-ms  = <10>;
+        tap-ms = <10>;
         bindings = <&kp LC(TAB)>;
-      )
 
-      ZMK_MACRO(prv_tab,
+        )
+
+      ZMK_MACRO(
+
+        prv_tab,
         wait-ms = <0>;
-        tap-ms  = <10>;
+        tap-ms = <10>;
         bindings = <&kp LC(LS(TAB))>;
-      )
-    };
-   
-    // custom shift using mod-morph 
-    behaviors {
-      cmqus: comma_question {
-        compatible = "zmk,behavior-mod-morph";
-        label = "COMMA_QUESTION";
-        #binding-cells = <0>;
-        bindings = <&kp COMMA>, <&kp QUESTION>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
 
-      dtsmi: dot_semi {
-        compatible = "zmk,behavior-mod-morph";
-        label = "DOT_SEMI";
-        #binding-cells = <0>;
-        bindings = <&kp DOT>, <&kp SEMI>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        masked_mods = <(MOD_LSFT|MOD_RSFT)>; // don't send shift
-      };
+        )
+    };
+
+    // custom shift using mod-morph 
+
+    behaviors {
+        cmqus: comma_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_QUESTION";
+            #binding-cells = <0>;
+            bindings =
+                <&kp COMMA>,
+                <&kp QUESTION>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        dtsmi: dot_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_SEMI";
+            #binding-cells = <0>;
+            bindings =
+                <&kp DOT>,
+                <&kp SEMI>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>;// don't send shift
+        };
     };
 
     // combos
+
     combos {
         compatible = "zmk,combos";
+
         // right hand 
+
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <16 17>;
+            key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
-        
-         combo_lgui {
+
+        combo_lgui {
             timeout-ms = <50>;
             key-positions = <5 6>;
             bindings = <&kp LGUI>;
         };
-        
-         combo_fullscreen {
+
+        combo_fullscreen {
             timeout-ms = <50>;
             key-positions = <25 26>;
             bindings = <&kp F11>;
         };
-        
-         combo_wkspc_up {
+
+        combo_wkspc_up {
             timeout-ms = <50>;
             key-positions = <9 19>;
             bindings = <&kp LC(UP)>;
         };
-        
-         combo_wkspc_down {
+
+        combo_wkspc_down {
             timeout-ms = <50>;
             key-positions = <19 29>;
             bindings = <&kp LC(DOWN)>;
         };
 
-         combo_win_up {
+        combo_win_up {
             timeout-ms = <50>;
             key-positions = <7 8>;
             bindings = <&kp LS(LG(UP))>;
         };
-        
-         combo_win_down {
+
+        combo_win_down {
             timeout-ms = <50>;
             key-positions = <27 28>;
             bindings = <&kp LS(LG(DOWN))>;
         };
 
-         combo_win_left {
+        combo_win_left {
             timeout-ms = <50>;
             key-positions = <17 18>;
             bindings = <&kp LS(LG(LEFT))>;
         };
 
-         combo_win_right {
+        combo_win_right {
             timeout-ms = <50>;
             key-positions = <9 18>;
             bindings = <&kp LS(LG(RIGHT))>;
         };
- 
-         combo_rdelete {
+
+        combo_rdelete {
             timeout-ms = <50>;
             key-positions = <15 16>;
             bindings = <&kp DELETE>;
         };
- 
+
         // left hand 
+
         combo_zoomin {
             timeout-ms = <50>;
             key-positions = <3 4>;
             bindings = <&kp LC(PLUS)>;
         };
- 
+
         combo_zoomout {
             timeout-ms = <50>;
             key-positions = <23 24>;
             bindings = <&kp LC(MINUS)>;
         };
- 
+
         combo_pgdn {
             timeout-ms = <50>;
             key-positions = <22 23>;
             bindings = <&kp PG_DN>;
         };
- 
+
         combo_pgup {
             timeout-ms = <50>;
             key-positions = <2 3>;
@@ -198,6 +229,7 @@
         };
 
         // symbols
+
         combo_underscore {
             timeout-ms = <50>;
             key-positions = <11 12>;
@@ -211,6 +243,7 @@
         };
 
         // toggles
+
         combo_capswd {
             timeout-ms = <50>;
             key-positions = <2 7>;
@@ -235,7 +268,7 @@
         //     key-positions = <4 14>;
         //     bindings = <&out OUT_USB>;
         // };
- 
+
         combo_outble {
             timeout-ms = <50>;
             key-positions = <4 14>;
@@ -249,6 +282,7 @@
         };
 
         // ble selection
+
         combo_ble1 {
             timeout-ms = <50>;
             key-positions = <14 24>;
@@ -282,68 +316,72 @@
 };
 
 &mt {
-   flavor = "tap-preferred";
-   tapping_term_ms = <200>;
+    flavor = "tap-preferred";
+    tapping_term_ms = <200>;
 };
 
-/ { 
-
+/ {
     keymap {
         compatible = "zmk,keymap";
-                
-     		default_layer {
-            label = "QWRT";
-        		bindings = <
-            		&kp Q &kp W      &kp E      &kp R      &kp T        &kp Y     &kp U      &kp I       &kp O       &kp P
-             		&kp A &mt LSFT S &mt LALT D &mt LCTL F &lt NUM G    &lt NUM H &mt RCTL J &mt RALT K  &mt RSFT L  &kp SQT 
-                &kp Z &kp X      &kp C      &kp V      &kp B        &kp N     &kp M      &cmqus      &dtsmi      &kp RC(B)
-                    &encoder     &lt FUN TAB    &lt SYM SPACE       &lt SYM RET   &lt FUN BSPC   &encoder
-             		>;
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
-		    };
 
-     		colemak_layer {
-            label = "CLMK";
-        		bindings = <
-            		&kp Q &kp W      &kp F      &kp P      &kp B        &kp J     &kp L      &kp U      &kp Y      &kp SQT
-             		&kp A &mt LSFT R &mt LALT S &mt LCTL T &lt NUM G    &lt NUM M &mt RCTL N &mt RALT E &mt RSFT I &kp O
-                &kp Z &kp X      &kp C      &kp D      &kp V        &kp K     &kp H      &cmqus     &dtsmi     &kp RC(B)
-                    &encoder     &lt FUN TAB    &lt SYM SPACE       &lt SYM RET   &lt FUN BSPC   &encoder
-             		>;
+        default_layer {
+            label = "QWRT";
+            bindings = <
+     &kp Q        &kp W          &kp E        &kp R         &kp T      &kp Y       &kp U       &kp I       &kp O      &kp P
+     &kp A   &mt LSFT S     &mt LALT D   &mt LCTL F     &lt NUM G  &lt NUM H  &mt RCTL J  &mt RALT K  &mt RSFT L    &kp SQT
+     &kp Z        &kp X          &kp C        &kp V         &kp B      &kp N       &kp M      &cmqus      &dtsmi  &kp RC(B)
+  &encoder  &lt FUN TAB  &lt SYM SPACE  &lt SYM RET  &lt FUN BSPC   &encoder
+            >;
+
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
-		    };
+        };
+
+        colemak_layer {
+            label = "CLMK";
+            bindings = <
+     &kp Q        &kp W          &kp F        &kp P         &kp B      &kp J       &kp L       &kp U       &kp Y    &kp SQT
+     &kp A   &mt LSFT R     &mt LALT S   &mt LCTL T     &lt NUM G  &lt NUM M  &mt RCTL N  &mt RALT E  &mt RSFT I      &kp O
+     &kp Z        &kp X          &kp C        &kp D         &kp V      &kp K       &kp H      &cmqus      &dtsmi  &kp RC(B)
+  &encoder  &lt FUN TAB  &lt SYM SPACE  &lt SYM RET  &lt FUN BSPC   &encoder
+            >;
+
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
+        };
 
         number_layer {
             label = "NUM";
             bindings = <
-                &bt BT_NXT  &none     &kp UP    &none      &spc1      &kp KP_PLUS     &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS
-                &bt BT_PRV  &kp LEFT  &kp DOWN  &kp RIGHT  &spc2      &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_DIVIDE
-                &bt BT_CLR  &none     &none     &none      &spc3      &kp KP_EQUAL    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT
-                                      &encoder  &spc4      &kp BSPC      &kp RET         &kp KP_N0  &encoder
+  &bt BT_NXT     &none    &kp UP      &none      &spc1      &kp KP_PLUS  &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_MINUS
+  &bt BT_PRV  &kp LEFT  &kp DOWN  &kp RIGHT      &spc2  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_DIVIDE
+  &bt BT_CLR     &none     &none      &none      &spc3     &kp KP_EQUAL  &kp KP_N1  &kp KP_N2  &kp KP_N3     &kp KP_DOT
+    &encoder     &spc4  &kp BSPC    &kp RET  &kp KP_N0         &encoder
             >;
+
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         symbol_layer {
             label = "SYM";
             bindings = <
-                &none     &none    &kp LT    &kp GT   &kp PRCNT   &kp AMPS &kp CARET &kp LBRC &kp RBRC &tog COLEMAK
-                &kp GRAVE &kp EXCL &kp MINUS &kp PLUS &kp EQUAL   &kp PIPE &kp COLON &kp LPAR &kp RPAR &kp AT
-                &none     &none    &kp SLASH &kp STAR &kp BSLH    &kp HASH &kp DLLR  &kp LBKT &kp RBKT &none  
-                                      &encoder  &none    &none       &none    &none  &encoder
+      &none     &none     &kp LT    &kp GT  &kp PRCNT  &kp AMPS  &kp CARET  &kp LBRC  &kp RBRC  &tog COLEMAK
+  &kp GRAVE  &kp EXCL  &kp MINUS  &kp PLUS  &kp EQUAL  &kp PIPE  &kp COLON  &kp LPAR  &kp RPAR        &kp AT
+      &none     &none  &kp SLASH  &kp STAR   &kp BSLH  &kp HASH   &kp DLLR  &kp LBKT  &kp RBKT         &none
+   &encoder     &none      &none     &none      &none  &encoder
             >;
+
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-        
+
         function_layer {
             label = "FUN";
             bindings = <
-                &none  &kp F1  &kp F2  &kp F3  &none       &none &kp F4  &kp F5  &kp F6  &none
-                &none  &kp F7  &kp F8  &kp F9  &none       &none &kp F10 &kp F11 &kp F12 &none
-                &none  &none   &none   &none   &none       &none &none   &none   &none   &none
-                               &none   &none   &none       &none &none   &none
+  &none  &kp F1  &kp F2  &kp F3  &none  &none   &kp F4   &kp F5   &kp F6  &none
+  &none  &kp F7  &kp F8  &kp F9  &none  &none  &kp F10  &kp F11  &kp F12  &none
+  &none   &none   &none   &none  &none  &none    &none    &none    &none  &none
+  &none   &none   &none   &none  &none  &none
             >;
+
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-   	};
+    };
 };
