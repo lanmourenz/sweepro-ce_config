@@ -39,6 +39,13 @@
             timeout-ms = <200>;
             layers = <0>;
         };
+
+        Win {
+            bindings = <&kp LCMD>;
+            key-positions = <32 31>;
+            timeout-ms = <200>;
+            layers = <0>;
+        };
     };
 
     keymap {
