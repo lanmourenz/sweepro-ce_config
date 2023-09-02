@@ -37,7 +37,7 @@
 
       ZMK_MACRO(
 
-        encoder, = // for encoder switch press;;;;
+        encoder, = // for encoder switch press;;;;;
         wait-ms = <0>;
         tap-ms = <10>;
         bindings =
@@ -48,7 +48,7 @@
 
       ZMK_MACRO(
 
-        spc1, = // for spacemacs window nav, Alt+M+1;;;;
+        spc1, = // for spacemacs window nav, Alt+M+1;;;;;
         wait-ms = <0>;
         tap-ms = <10>;
         bindings = <&kp LA(M) &kp N1>;
@@ -104,27 +104,6 @@
     // custom shift using mod-morph 
 
     behaviors {
-        cmqus: comma_question {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_QUESTION";
-            #binding-cells = <0>;
-            bindings =
-                <&kp COMMA>,
-                <&kp QUESTION>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        dtsmi: dot_semi {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_SEMI";
-            #binding-cells = <0>;
-            bindings =
-                <&kp DOT>,
-                <&kp SEMI>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            masked_mods = <(MOD_LSFT|MOD_RSFT)>;// don't send shift
-        };
     };
 
     // combos
@@ -144,11 +123,6 @@
         // };
         // ble selection
     };
-};
-
-&mt {
-    flavor = "tap-preferred";
-    tapping_term_ms = <200>;
 };
 
 / {
