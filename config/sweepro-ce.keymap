@@ -20,13 +20,8 @@
 #define SYM     3
 #define FUN     4
 
-#include "key-common.dtsi"
 #include <dt-bindings/zmk/keys.h>
 
-&mt {
-    flavor = "tap-preferred";
-    tapping_term_ms = <200>;
-};
 
 / {
     keymap {
