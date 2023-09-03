@@ -70,13 +70,17 @@
   &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans
   &trans  &trans  &trans  &trans  &trans  &trans
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp 0 0>,
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_2 {
             bindings = <
-  &trans          &trans  &kp UP_ARROW           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &kp LEFT_ARROW      &kp DOWN  &kp RIGHT_ARROW  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans          &trans        &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &trans          &trans  &kp UP_ARROW           &trans  &trans  &trans    &trans    &kp UP     &trans  &trans
+  &trans  &kp LEFT_ARROW      &kp DOWN  &kp RIGHT_ARROW  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+  &trans          &trans        &trans           &trans  &trans  &trans    &trans    &trans     &trans  &trans
   &trans          &trans        &trans           &trans  &trans  &trans
             >;
         };
