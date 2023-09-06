@@ -51,13 +51,13 @@
             bindings = <&kp LCTRL>;
             key-positions = <11 12>;
             layers = <0>;
-            timeout-ms = <50>;
+            timeout-ms = <200>;
         };
 
         lalt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <12 13>;
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             layers = <0>;
         };
 
@@ -65,14 +65,14 @@
             bindings = <&kp TAB>;
             key-positions = <10 11>;
             layers = <0>;
-            timeout-ms = <50>;
+            timeout-ms = <200>;
         };
 
         lshift {
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <20 21>;
             layers = <0>;
-            timeout-ms = <50>;
+            timeout-ms = <200>;
         };
     };
 
@@ -91,7 +91,7 @@
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
         };
 
-        layer_1 {
+        NUM {
             bindings = <
   &kp N1  &kp N2  &kp N3  &kp N4            &kp N5         &kp N6            &kp N7             &kp N8     &kp N9     &kp N0
   &trans  &trans  &trans  &kp C_AC_REFRESH  &kp C_AL_CALC  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &kp EQUAL  &trans
@@ -104,7 +104,7 @@
                 <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        layer_2 {
+        SYM {
             bindings = <
   &kp LA(F4)  &trans          &kp UP_ARROW  &trans           &trans  &trans  &trans    &kp UP    &trans     &trans
   &trans      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
@@ -113,7 +113,7 @@
             >;
         };
 
-        layer_3 {
+        FUN {
             bindings = <
   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &trans
   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
