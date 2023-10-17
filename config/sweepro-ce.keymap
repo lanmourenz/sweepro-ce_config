@@ -29,21 +29,21 @@
         Esc {
             bindings = <&kp ESC>;
             key-positions = <0 1>;
-            timeout-ms = <50>;
+            timeout-ms = <120>;
             layers = <0>;
         };
 
         Bs {
             bindings = <&kp DEL>;
             key-positions = <8 9>;
-            timeout-ms = <50>;
+            timeout-ms = <120>;
             layers = <0>;
         };
 
         Win {
             bindings = <&kp LCMD>;
             key-positions = <32 31>;
-            timeout-ms = <50>;
+            timeout-ms = <120>;
             layers = <0>;
         };
 
@@ -51,13 +51,13 @@
             bindings = <&kp LCTRL>;
             key-positions = <11 12>;
             layers = <0>;
-            timeout-ms = <50>;
+            timeout-ms = <120>;
         };
 
         lalt {
             bindings = <&kp LEFT_ALT>;
             key-positions = <12 13>;
-            timeout-ms = <50>;
+            timeout-ms = <120>;
             layers = <0>;
         };
     };
