@@ -60,6 +60,19 @@
             timeout-ms = <120>;
             layers = <0>;
         };
+
+        shift {
+            bindings = <&kp LEFT_SHIFT>;
+            key-positions = <20 21>;
+            timeout-ms = <120>;
+        };
+
+        rshift {
+            bindings = <&kp RSHIFT>;
+            key-positions = <28 29>;
+            timeout-ms = <120>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -79,10 +92,10 @@
 
         NUM {
             bindings = <
-  &kp N1        &kp N2  &kp N3  &kp N4            &kp N5         &kp N6            &kp N7             &kp N8     &kp N9     &kp N0
-  &kp CAPSLOCK  &trans  &trans  &kp C_AC_REFRESH  &kp C_AL_CALC  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &kp EQUAL  &trans
-  &kp LSHFT     &trans  &trans  &trans            &trans         &trans            &trans             &trans     &trans     &kp LSHFT
-  &trans        &trans  &trans  &trans            &trans         &trans
+  &kp N1        &kp N2  &kp N3  &kp N4  &kp N5         &kp N6            &kp N7             &kp N8     &kp N9     &kp N0
+  &kp CAPSLOCK  &trans  &trans  &mo 4   &kp C_AL_CALC  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &kp EQUAL  &trans
+  &kp LSHFT     &trans  &trans  &trans  &trans         &trans            &trans             &trans     &trans     &kp LSHFT
+  &trans        &trans  &trans  &trans  &trans         &trans
             >;
 
             sensor-bindings =
@@ -92,10 +105,10 @@
 
         SYM {
             bindings = <
-  &kp LA(F4)  &trans          &kp UP_ARROW  &trans           &trans  &trans  &trans    &kp UP    &trans     &trans
-  &trans      &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-  &trans      &trans          &trans        &trans           &trans  &trans  &trans    &trans    &trans     &trans
-  &trans      &trans          &trans        &trans           &trans  &trans
+  &kp LC(LG(Q))  &trans          &kp UP_ARROW  &trans           &trans  &trans  &trans    &kp UP    &trans     &trans
+  &trans         &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+  &kp LG(LA(A))  &trans          &trans        &trans           &trans  &trans  &trans    &trans    &trans     &trans
+  &trans         &trans          &trans        &trans           &trans  &trans
             >;
         };
 
@@ -105,6 +118,15 @@
   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
   &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+  &trans         &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &kp LG(LA(A))  &trans  &kp LG(LA(D))  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &kp LA(LG(Z))  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &trans         &trans  &trans         &trans  &trans  &trans
             >;
         };
     };
