@@ -81,10 +81,10 @@
         default_layer {
             label = "QWRT";
             bindings = <
-  &kp Q      &kp W        &kp E        &kp R        &kp T            &kp Y            &kp U  &kp I      &kp O    &kp P
-  &kp A      &kp S        &kp D        &kp F        &kp G            &kp H            &kp J  &kp K      &kp L    &kp ENTER
-  &kp Z      &kp X        &kp C        &kp V        &kp B            &kp N            &kp M  &kp COMMA  &kp DOT  &kp QUESTION
-  &kp LG(E)  &lt 1 SPACE  &lt 3 SPACE  &lt 1 SPACE  &lt 2 BACKSPACE  &kp LC(LS(ESC))
+  &kp Q      &kp W        &kp E        &kp R        &kp T          &kp Y            &kp U  &kp I      &kp O    &kp P
+  &kp A      &kp S        &kp D        &kp F        &kp G          &kp H            &kp J  &kp K      &kp L    &kp ENTER
+  &kp Z      &kp X        &kp C        &kp V        &kp B          &kp N            &kp M  &kp COMMA  &kp DOT  &kp QUESTION
+  &kp LG(E)  &lt 1 SPACE  &lt 2 SPACE  &lt 1 SPACE  &kp BACKSPACE  &kp LC(LS(ESC))
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
@@ -105,10 +105,10 @@
 
         SYM {
             bindings = <
-  &kp LC(LG(Q))  &trans          &kp UP_ARROW  &trans           &trans  &trans  &trans    &kp UP    &trans     &trans
-  &trans         &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-  &kp LG(LA(A))  &trans          &trans        &trans           &trans  &trans  &trans    &trans    &trans     &trans
-  &trans         &trans          &trans        &trans           &trans  &trans
+  &kp LC(LG(Q))  &trans    &trans          &trans           &trans  &trans  &trans          &trans          &trans           &trans
+  &trans         &trans    &kp UP_ARROW    &mo 3            &trans  &trans  &trans          &kp UP_ARROW    &trans           &trans
+  &kp LG(LA(A))  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+  &trans         &trans    &trans          &trans           &trans  &trans
             >;
         };
 
