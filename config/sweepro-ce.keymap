@@ -105,9 +105,9 @@
 
         SYM {
             bindings = <
-  &kp LC(LG(Q))  &trans    &trans          &trans           &trans  &trans  &trans          &trans          &trans           &trans
+  &kp LG(D)      &trans    &trans          &trans           &trans  &trans  &trans          &trans          &trans           &trans
   &trans         &trans    &kp UP_ARROW    &mo 3            &trans  &trans  &trans          &kp UP_ARROW    &trans           &trans
-  &kp LG(LA(A))  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+  &kp LA(LC(A))  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
   &trans         &trans    &trans          &trans           &trans  &trans
             >;
         };
@@ -123,10 +123,10 @@
 
         layer_4 {
             bindings = <
-  &trans         &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &kp LG(LA(A))  &trans  &kp LG(LA(D))  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &kp LA(LG(Z))  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans         &trans  &trans         &trans  &trans  &trans
+  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &kp LA(LC(D))  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans         &trans  &trans  &trans
             >;
         };
     };
