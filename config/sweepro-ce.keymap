@@ -73,6 +73,12 @@
             timeout-ms = <120>;
             layers = <0>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+            timeout-ms = <120>;
+        };
     };
 
     keymap {
@@ -105,10 +111,10 @@
 
         SYM {
             bindings = <
-  &kp LG(D)      &trans    &trans          &trans           &trans  &trans  &trans          &trans          &trans           &trans
-  &trans         &trans    &kp UP_ARROW    &mo 3            &trans  &trans  &trans          &kp UP_ARROW    &trans           &trans
-  &kp LA(LC(A))  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-  &trans         &trans    &trans          &trans           &trans  &trans
+  &kp LA(F4)     &trans    &trans          &trans           &trans         &trans  &trans          &trans          &trans           &trans
+  &trans         &trans    &kp UP_ARROW    &mo 3            &kp K_REFRESH  &trans  &trans          &kp UP_ARROW    &trans           &trans
+  &kp LA(LC(A))  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans         &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+  &trans         &trans    &trans          &trans           &trans         &trans
             >;
         };
 
@@ -123,10 +129,10 @@
 
         layer_4 {
             bindings = <
-  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &kp LA(LC(D))  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans         &trans  &trans  &trans
+  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &kp LG(D)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans     &trans  &trans  &trans
             >;
         };
     };
