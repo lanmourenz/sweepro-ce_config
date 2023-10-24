@@ -111,10 +111,10 @@
 
         SYM {
             bindings = <
-  &kp LA(F4)     &trans    &trans          &trans           &trans         &trans  &trans          &trans          &trans           &trans
-  &trans         &trans    &kp UP_ARROW    &mo 3            &kp K_REFRESH  &trans  &trans          &kp UP_ARROW    &trans           &trans
-  &kp LA(LC(A))  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans         &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-  &trans         &trans    &trans          &trans           &trans         &trans
+  &kp LA(F4)     &trans    &trans          &trans           &trans            &trans  &trans          &trans          &trans           &trans
+  &trans         &trans    &kp UP_ARROW    &mo 3            &kp C_AC_REFRESH  &trans  &trans          &kp UP_ARROW    &trans           &trans
+  &kp LA(LC(A))  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+  &trans         &trans    &trans          &trans           &trans            &trans
             >;
         };
 
