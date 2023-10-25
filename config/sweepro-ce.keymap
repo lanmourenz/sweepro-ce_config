@@ -79,6 +79,17 @@
             key-positions = <10 11>;
             timeout-ms = <120>;
         };
+
+        chuangkou {
+            bindings = <&kp LG(LEFT)>;
+            key-positions = <16 17>;
+            timeout-ms = <120>;
+        };
+
+        chuangkou2 {
+            bindings = <&kp LG(RIGHT)>;
+            key-positions = <18 17>;
+        };
     };
 
     keymap {
