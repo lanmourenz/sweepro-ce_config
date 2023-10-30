@@ -90,6 +90,18 @@
             bindings = <&kp LG(RIGHT)>;
             key-positions = <18 17>;
         };
+
+        chuangkou3 {
+            bindings = <&kp LG(UP)>;
+            key-positions = <7 8>;
+            timeout-ms = <120>;
+        };
+
+        chaungkou4 {
+            bindings = <&kp LG(DOWN)>;
+            key-positions = <27 28>;
+            timeout-ms = <120>;
+        };
     };
 
     keymap {
