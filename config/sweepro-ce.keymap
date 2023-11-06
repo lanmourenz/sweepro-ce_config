@@ -33,7 +33,7 @@
             layers = <0>;
         };
 
-        Bs {
+        del {
             bindings = <&kp DEL>;
             key-positions = <8 9>;
             timeout-ms = <120>;
@@ -67,13 +67,6 @@
             timeout-ms = <120>;
         };
 
-        rshift {
-            bindings = <&kp RSHIFT>;
-            key-positions = <28 29>;
-            timeout-ms = <120>;
-            layers = <0>;
-        };
-
         tab {
             bindings = <&kp TAB>;
             key-positions = <10 11>;
@@ -102,6 +95,12 @@
             key-positions = <27 28>;
             timeout-ms = <120>;
         };
+
+        wenhao {
+            bindings = <&kp QUESTION>;
+            key-positions = <29 28>;
+            timeout-ms = <120>;
+        };
     };
 
     keymap {
@@ -123,7 +122,7 @@
             bindings = <
   &kp N1        &kp N2  &kp N3  &kp N4            &kp N5         &kp N6            &kp N7             &kp N8     &kp N9     &kp N0
   &kp CAPSLOCK  &trans  &trans  &kp C_AC_REFRESH  &kp C_AL_CALC  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &kp EQUAL  &trans
-  &kp LSHFT     &trans  &trans  &trans            &trans         &trans            &trans             &trans     &trans     &kp QUESTION
+  &kp LSHFT     &trans  &trans  &trans            &trans         &trans            &trans             &trans     &trans     &trans
   &trans        &trans  &trans  &trans            &trans         &trans
             >;
 
