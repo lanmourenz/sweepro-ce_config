@@ -107,8 +107,9 @@
         new_macro: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N1 &kp N5 &kp N0 &kp N5 &kp N0 &kp N7>;
+            bindings = <&kp NUMBER_1 &kp NUMBER_5 &kp N0 &kp NUMBER_5 &kp NUMBER_0 &kp NUMBER_7>;
             label = "NEW_MACRO";
+            tap-ms = <10>;
         };
     };
 
