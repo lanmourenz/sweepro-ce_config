@@ -103,6 +103,34 @@
         };
     };
 
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp NUMBER_1>,
+                <&macro_release>,
+                <&macro_press>,
+                <&kp NUMBER_5>,
+                <&macro_release>,
+                <&macro_press>,
+                <&kp NUMBER_0>,
+                <&macro_release>,
+                <&macro_press>,
+                <&kp NUMBER_5>,
+                <&macro_release>,
+                <&macro_press>,
+                <&kp NUMBER_0>,
+                <&macro_release>,
+                <&macro_press>,
+                <&kp NUMBER_7>,
+                <&macro_release>;
+
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -133,9 +161,9 @@
 
         SYM {
             bindings = <
-  &kp LA(F4)     &trans  &trans     &trans     &trans            &trans  &trans          &trans          &trans           &trans
-  &kp LC(A)      &trans  &trans     &mo 3      &kp C_AC_REFRESH  &trans  &trans          &kp UP_ARROW    &trans           &trans
-  &kp LA(LC(A))  &trans  &kp LC(C)  &kp LC(V)  &trans            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+  &kp LA(F4)     &trans  &trans     &trans     &trans            &new_macro  &trans          &trans          &trans           &trans
+  &kp LC(A)      &trans  &trans     &mo 3      &kp C_AC_REFRESH  &trans      &trans          &kp UP_ARROW    &trans           &trans
+  &kp LA(LC(A))  &trans  &kp LC(C)  &kp LC(V)  &trans            &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
   &trans         &trans  &trans     &trans     &trans            &trans
             >;
         };
