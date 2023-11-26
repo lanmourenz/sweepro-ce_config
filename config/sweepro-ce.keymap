@@ -20,6 +20,7 @@
 #define SYM     3
 #define FUN     4
 
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -109,7 +110,7 @@
             #binding-cells = <0>;
             bindings = <&kp NUMBER_1 &kp NUMBER_5 &kp N0 &kp NUMBER_5 &kp NUMBER_0 &kp NUMBER_7>;
             label = "NEW_MACRO";
-            tap-ms = <10>;
+            tap-ms = <0>;
         };
     };
 
@@ -143,7 +144,7 @@
 
         SYM {
             bindings = <
-  &kp LA(F4)     &trans  &trans     &trans     &trans            &new_macro  &trans          &trans          &trans           &trans
+  &kp LA(F4)     &trans  &trans     &trans     &trans            &new_macro  &trans          &trans          &bt BT_SEL 0     &bt BT_SEL 1
   &kp LC(A)      &trans  &trans     &mo 3      &kp C_AC_REFRESH  &trans      &trans          &kp UP_ARROW    &trans           &trans
   &kp LA(LC(A))  &trans  &kp LC(C)  &kp LC(V)  &trans            &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
   &trans         &trans  &trans     &trans     &trans            &trans
