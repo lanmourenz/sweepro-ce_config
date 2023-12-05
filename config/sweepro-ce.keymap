@@ -145,7 +145,7 @@
         SYM {
             bindings = <
   &kp LA(F4)     &trans  &trans     &trans     &trans            &new_macro  &trans          &trans          &bt BT_SEL 0     &bt BT_SEL 1
-  &kp LC(A)      &trans  &trans     &mo 3      &kp C_AC_REFRESH  &trans      &trans          &kp UP_ARROW    &bt BT_DISC 1    &trans
+  &kp LC(A)      &trans  &trans     &mo 3      &kp C_AC_REFRESH  &trans      &trans          &kp UP_ARROW    &bt BT_DISC 0    &bt BT_DISC 1
   &kp LA(LC(A))  &trans  &kp LC(C)  &kp LC(V)  &trans            &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
   &trans         &trans  &trans     &trans     &trans            &trans
             >;
