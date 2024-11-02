@@ -3,16 +3,11 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
-#include <behaviors.dtsi>
-
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
-
-#include <behaviors.dtsi>
 
 #define DEFAULT 0
 #define COLEMAK 1
@@ -20,6 +15,7 @@
 #define SYM     3
 #define FUN     4
 
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
@@ -97,8 +93,8 @@
             timeout-ms = <120>;
         };
 
-        wenhao {
-            bindings = <&kp QUESTION>;
+        Rshift {
+            bindings = <&kp RSHFT>;
             key-positions = <29 28>;
             timeout-ms = <120>;
         };
