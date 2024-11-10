@@ -64,8 +64,8 @@
             timeout-ms = <120>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
+        Cap {
+            bindings = <&kp CAPSLOCK>;
             key-positions = <10 11>;
             timeout-ms = <120>;
         };
