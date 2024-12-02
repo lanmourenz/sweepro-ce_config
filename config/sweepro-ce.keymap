@@ -70,29 +70,6 @@
             timeout-ms = <120>;
         };
 
-        chuangkou {
-            bindings = <&kp LG(LEFT)>;
-            key-positions = <16 17>;
-            timeout-ms = <120>;
-        };
-
-        chuangkou2 {
-            bindings = <&kp LG(RIGHT)>;
-            key-positions = <18 17>;
-        };
-
-        chuangkou3 {
-            bindings = <&kp LG(UP)>;
-            key-positions = <7 8>;
-            timeout-ms = <120>;
-        };
-
-        chaungkou4 {
-            bindings = <&kp LG(DOWN)>;
-            key-positions = <27 28>;
-            timeout-ms = <120>;
-        };
-
         Rshift {
             bindings = <&kp RSHFT>;
             key-positions = <29 28>;
