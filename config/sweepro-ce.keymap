@@ -30,13 +30,6 @@
             layers = <0>;
         };
 
-        del {
-            bindings = <&kp DEL>;
-            key-positions = <8 9>;
-            timeout-ms = <120>;
-            layers = <0>;
-        };
-
         Win {
             bindings = <&kp LCMD>;
             key-positions = <32 31>;
