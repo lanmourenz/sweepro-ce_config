@@ -30,13 +30,6 @@
             layers = <0>;
         };
 
-        Win {
-            bindings = <&kp LCMD>;
-            key-positions = <32 31>;
-            timeout-ms = <120>;
-            layers = <0>;
-        };
-
         lctrl {
             bindings = <&kp LCTRL>;
             key-positions = <11 12>;
